@@ -20,7 +20,10 @@ honnêtes** à partir de tarifs publics suffisent pour trancher.
   fixe GPU mais maîtrise des données. En pratique, le self-host = louer un GPU
   chez un hyperscaler (étage IaaS) et l'API = leur étage managé — repères dans
   `cheatsheet_cloud_hyperscalers.md` (`ia-atos-ressources`).
-- **Embeddings** : un RAG facture aussi les embeddings (indexation + requêtes).
+- **Unité de coût** : une extraction se paie **par document** (une fois par
+  compte-rendu, en batch), une prédiction ML **par requête**, un RAG **par
+  question** (+ embeddings à l'indexation et à chaque requête). Ne pas
+  mélanger les unités.
 - **Ordre de grandeur** : un RandomForest = **~50 €/mois** (compute négligeable) ;
   une option LLM en API = **~300–800 €/mois** selon le volume.
 - **Coût caché** : latence (UX), maintenance de la stack, dépendance fournisseur.
@@ -30,17 +33,18 @@ honnêtes** à partir de tarifs publics suffisent pour trancher.
 ## Exemple minimal qui tourne
 
 ```text
-Hypothèse : 5 000 prédictions/jour.
+Hypothèse : 5 000 séjours/jour, 1 compte-rendu par séjour.
 - Option A (RandomForest) : compute ~négligeable → ~50 €/mois (hébergement).
-- Option B (API LLM, ~500 tokens in + 100 out/req) :
-  5000 × 30 × (600 tokens) × prix ≈ quelques centaines d'€/mois + embeddings.
-→ Ordre de grandeur : A ~10× moins cher que B.
+- Option B (extraction LLM en API, ~2 000 tokens in + 150 out JSON / CR) :
+  5 000 × 30 × (2 000 × prix_in + 150 × prix_out) ≈ quelques centaines d'€/mois,
+  + le coût A (le modèle ML tourne toujours) + relecture humaine des cas incertains.
+→ Ordre de grandeur : B ≈ A + un ordre de grandeur, **avant** relecture humaine.
 ```
 
 ## Exercice guidé
 
 1. Pose une hypothèse de volume (inférences/jour) pour MediVox.
-2. Estime le €/mois de l'option A et de l'option B (tarifs publics).
+2. Estime le €/mois de l'option A et de l'option B (tarifs publics), en choisissant la bonne **unité** (requête ou document).
 3. Conclus en **ordre de grandeur** (« B ~10× A ») + 1 risque de coût caché.
 
 ## Pièges fréquents
@@ -49,7 +53,7 @@ Hypothèse : 5 000 prédictions/jour.
 |---|---|
 | Oublier le coût d'output | Sous-estime fortement le coût LLM |
 | Budget au centime | Faux précis, non crédible |
-| Ignorer les embeddings (RAG) | Coût incomplet |
+| Ignorer les embeddings (RAG) ou la relecture humaine (extraction) | Coût incomplet |
 | Comparer sans hypothèse de volume | Chiffres incomparables |
 | Oublier les coûts cachés (latence, maintenance) | Arbitrage biaisé |
 
@@ -66,7 +70,7 @@ Hypothèse : 5 000 prédictions/jour.
 ## Vérification (checklist apprenant)
 
 - [ ] Je pose une hypothèse de volume explicite.
-- [ ] Je compte input **et** output (et embeddings si RAG).
+- [ ] Je compte input **et** output (et embeddings si RAG, relecture si extraction).
 - [ ] Je donne des **ordres de grandeur** (pas un faux précis).
 - [ ] Je compare A et B en €/mois.
 - [ ] Je cite ≥ 1 coût caché.

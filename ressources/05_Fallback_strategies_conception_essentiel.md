@@ -22,7 +22,8 @@ parle de fallback en **conception** (choix d'archi), distinct de la réaction au
 - **Human-in-the-loop (HITL)** : un humain valide/tranche les cas incertains ;
   natif dans une archi multi-agents (agent superviseur).
 - **Fallback par option** : chaque architecture a son fallback naturel
-  (A : seuil de rejet ; B : abstention RAG ; C : HITL via superviseur).
+  (A : seuil de rejet ; B : extraction incertaine → champ `null` + relecture
+  humaine ; C : HITL via superviseur ; assistant RAG : abstention).
 - **Conformité** : le HITL répond à l'AI Act (supervision humaine) et au RGPD
   art. 22 (décision non purement automatisée).
 - **Conception ≠ exploitation** : ici on **choisit** la stratégie ; en M6 on
@@ -40,7 +41,7 @@ Option A — seuil de rejet :
 
 Pour chacune des 3 options MediVox, propose **un** fallback :
 1. Option A (ML) : quel seuil de rejet ?
-2. Option B (RAG) : quand s'abstenir ?
+2. Option B (hybride) : que fait-on d'une extraction incertaine ou invalide ?
 3. Option C (agents) : quand le superviseur appelle-t-il un humain ?
 Relie chaque fallback à une obligation AI Act/RGPD.
 
@@ -53,6 +54,7 @@ Relie chaque fallback à une obligation AI Act/RGPD.
 | Seuil de rejet arbitraire | Non justifiable |
 | HITL « théorique » sans procédure | Conformité non prouvée |
 | Abstention non prévue en RAG | Hallucinations |
+| Extraction incertaine injectée telle quelle | Le modèle ML apprend et prédit sur des valeurs inventées |
 
 | Symptôme | Cause probable |
 |---|---|
@@ -73,7 +75,7 @@ Relie chaque fallback à une obligation AI Act/RGPD.
 - [ ] Le HITL est décrit comme une **procédure**, pas un vœu.
 
 > 💡 **Récap** : prévoir **dès l'architecture** quoi faire quand le modèle n'est pas
-> sûr — seuil de rejet (A), abstention (B), HITL (C) — et relier chaque fallback à une
+> sûr — seuil de rejet (A), `null` + relecture (B), HITL (C), abstention (RAG) — et relier chaque fallback à une
 > obligation (AI Act art. 14 / RGPD art. 22). Fallback en **conception** ≠ réaction au
 > **drift** en exploitation (M6).
 

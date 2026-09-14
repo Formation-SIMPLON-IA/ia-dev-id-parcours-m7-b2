@@ -2,8 +2,10 @@
 marp: true
 paginate: true
 ---
-# Évolution architecture DMS — MediVox
+# Évolution du prédicteur de séjour prolongé — MediVox
 ### _votre binôme_ — recommandation : _…_
+
+<!-- Décision en une phrase (figée au freeze, relue le matin de la restitution) : … -->
 ---
 ## Contexte
 ---

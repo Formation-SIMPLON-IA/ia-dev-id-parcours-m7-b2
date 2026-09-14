@@ -16,8 +16,13 @@ Sur un problème tabulaire simple, la réponse est souvent « moderniser l'exist
 
 - **A — ML classique modernisé** : le modèle actuel + industrialisation (CI/CD,
   monitoring). Explicable, sobre, conforme. Ignore le texte non structuré.
-- **B — LLM + RAG** : un LLM augmenté par une recherche documentaire (embeddings
-  → vector store → retriever). Exploite le texte ; coûteux, moins explicable.
+- **B — Hybride LLM → ML** : un LLM **extrait**, sous schéma contrôlé, des
+  variables des comptes-rendus ; après validation (incertitude, relecture
+  humaine), elles **enrichissent le modèle ML** qui, lui, prédit. Exploite le
+  texte ; ajoute une stack LLM, un coût par document et un risque d'extraction.
+- **Hors comparatif — l'assistant documentaire RAG** : répondre aux équipes à
+  partir d'un corpus est un **autre produit** (sortie = texte, pas un score).
+  Il peut répondre à un vrai besoin, mais il ne se compare pas au prédicteur.
 - **C — Multi-agents** : des agents spécialisés qui coopèrent. Modulaire, HITL
   natif ; complexe, risque de sur-engineering.
 - **4 dimensions de comparaison** : conformité, performance, sobriété, évolutivité.
@@ -33,7 +38,7 @@ vôtre) : la structure se réutilise, **pas les valeurs ni le verdict** —
 chaque cellule se re-dérive de VOTRE contexte, chiffres à l'appui.
 
 ```markdown
-| Dimension | A ML | B LLM+RAG | C agents |
+| Dimension | A ML | B hybride | C agents |
 |---|---|---|---|
 | Conformité | à évaluer | à évaluer | à évaluer |
 | Sobriété (€/mois) | ~X | ~10-20X | ~5-10X |
@@ -47,7 +52,7 @@ exactement l'argument non défendable du tableau des pièges.
 
 ## Exercice guidé
 
-Pour le DMS predictor MediVox :
+Pour le prédicteur MediVox :
 1. Pour chacune des 3 options, note **1 force + 1 faiblesse** majeures.
 2. Sur quelle dimension B ou C pourrait-elle battre A ? À quelle condition ?
 3. Quelle option recommanderais-tu **par défaut** ? Pourquoi ?
@@ -58,6 +63,7 @@ Pour le DMS predictor MediVox :
 |---|---|
 | Choisir la techno avant d'analyser le besoin | Sur-engineering |
 | Comparer sur des dimensions différentes par option | Comparaison invalide |
+| Comparer des produits différents (un RAG qui répond vs un modèle qui prédit) | Colonne sans métrique commune |
 | Recommander 3 options | Indécision — il faut trancher UNE |
 | Écarter A par principe | On rate souvent la meilleure réponse |
 | Gain « intuitif » non chiffré | Argument non défendable |
@@ -80,7 +86,7 @@ Pour le DMS predictor MediVox :
 - [ ] Je tranche **une** recommandation.
 - [ ] Mon gain annoncé est chiffré ou conditionné à une preuve.
 
-> 💡 **Récap** : comparer A (ML modernisé) / B (LLM+RAG) / C (agents) sur les **mêmes**
+> 💡 **Récap** : comparer A (ML modernisé) / B (hybride LLM → ML) / C (agents) sur les **mêmes**
 > 4 dimensions, puis **trancher UNE** option. Réflexe : la solution la plus **simple**
 > qui répond au besoin ; ne complexifier que si un gain est **prouvé**. Sur du tabulaire,
 > « moderniser l'existant » est souvent le meilleur verdict (sobriété).

@@ -44,7 +44,7 @@ Concevez (schéma + 3 lignes) l'option C pour MediVox :
 1. Quels agents, quel rôle chacun ?
 2. Quel état partagé circule ?
 3. Quand le superviseur route-t-il vers un humain ?
-4. **Question critique** : ce découpage se justifie-t-il pour prédire une DMS ?
+4. **Question critique** : ce découpage se justifie-t-il pour prédire un séjour prolongé ?
 
 ## Pièges fréquents
 
