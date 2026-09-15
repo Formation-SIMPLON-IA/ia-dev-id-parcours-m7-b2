@@ -8,7 +8,7 @@
 
 Une architecture **multi-agents** découpe une tâche en **agents spécialisés** qui
 coopèrent (un valide, un prédit, un explique, un supervise). C'est séduisant —
-modulaire, supervision humaine native — mais **coûteux et complexe**. En M7-B2 on
+modulaire, avec un routage vers un humain facile à dessiner — mais **coûteux et complexe**. En M7-B2 on
 **conçoit** l'option C pour la **comparer**, en gardant un œil critique : sur un
 problème tabulaire simple, des agents sont souvent du **sur-engineering**.
 
@@ -20,8 +20,12 @@ problème tabulaire simple, des agents sont souvent du **sur-engineering**.
   nœud transforme un **état partagé** et choisit la transition.
 - **État partagé** : le contexte qui circule entre agents (input, prédictions,
   justifications, niveau de confiance).
-- **HITL natif** : un agent **superviseur** peut router vers un humain si la
-  confiance est faible — atout pour l'AI Act (supervision humaine).
+- **Routage vers un humain ≠ supervision humaine** : un agent **superviseur** peut
+  envoyer un cas incertain vers une file humaine, mais cela ne crée ni supervision
+  effective ni conformité par soi-même. La supervision se **conçoit** : **qui**
+  tranche (rôle, compétence), avec quelle **autorité**, dans quel **délai**, quelle
+  **trace** est gardée, et le **pouvoir réel de contredire** le système (sans
+  validation par réflexe). Les options A et B peuvent offrir la même chose.
 - **Coût de la complexité** : plus d'appels LLM, debug difficile, observabilité
   exigeante, points de panne multiples.
 - **Quand c'est justifié** : workflows réellement multi-étapes hétérogènes — **pas**
@@ -76,6 +80,6 @@ Concevez (schéma + 3 lignes) l'option C pour MediVox :
 - [ ] Je **conçois** sans implémenter.
 
 > 💡 **Récap** : des **agents spécialisés** coopèrent via un **état partagé**
-> (orchestration). Atout : HITL natif (agent superviseur). Coût : complexité, debug,
+> (orchestration). Le routage vers un humain n'est pas un atout propre aux agents : la supervision (qui, autorité, délai, trace, pouvoir de contredire) se conçoit dans toute option. Coût : complexité, debug,
 > observabilité, points de panne. Pour une prédiction tabulaire simple = souvent
 > **sur-engineering** — à juger honnêtement.

@@ -23,8 +23,9 @@ Sur un problème tabulaire simple, la réponse est souvent « moderniser l'exist
 - **Hors comparatif — l'assistant documentaire RAG** : répondre aux équipes à
   partir d'un corpus est un **autre produit** (sortie = texte, pas un score).
   Il peut répondre à un vrai besoin, mais il ne se compare pas au prédicteur.
-- **C — Multi-agents** : des agents spécialisés qui coopèrent. Modulaire, HITL
-  natif ; complexe, risque de sur-engineering.
+- **C — Multi-agents** : des agents spécialisés qui coopèrent. Modulaire ; complexe,
+  risque de sur-engineering. Router vers un humain n'y est pas plus « natif »
+  qu'ailleurs : la supervision se conçoit dans toute option.
 - **4 dimensions de comparaison** : conformité, performance, sobriété, évolutivité.
 - **Anti-pattern de mode** : choisir B ou C parce que « c'est moderne » sans gain
   démontré = perte de points (et d'argent client).
