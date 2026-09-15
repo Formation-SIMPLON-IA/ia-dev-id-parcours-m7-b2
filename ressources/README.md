@@ -7,7 +7,6 @@
 | Concevoir du multi-agents | [`03_Multi_agents_LangGraph`](03_Multi_agents_LangGraph_essentiel.md) |
 | Estimer les coûts LLM | [`04_Estimation_couts_LLM`](04_Estimation_couts_LLM_essentiel.md) |
 | Fallback en conception | [`05_Fallback_strategies_conception`](05_Fallback_strategies_conception_essentiel.md) |
-| Slides de restitution | [`06_Slides_restitution_15min`](06_Slides_restitution_15min_essentiel.md) |
 | Fine-tuning : quand/comment/coût ⭐ | [`07_Fine_tuning_quand_comment`](07_Fine_tuning_quand_comment_essentiel.md) |
 
 ## Ressources transverses ([`ia-atos-ressources`](https://github.com/Formation-SIMPLON-IA/ia-atos-ressources))

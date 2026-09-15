@@ -11,8 +11,6 @@ Dernière vérification : 2026-06-10
   - État : ✅ vérifié le 2026-06-10
 - **Mermaid — flowchart** : https://mermaid.js.org/syntax/flowchart.html
   - État : ✅ vérifié le 2026-06-10
-- **Marp** : https://marp.app/
-  - État : ✅ vérifié le 2026-06-10
 - **AI Act — texte** : https://artificialintelligenceact.eu/the-act/
   - État : ✅ vérifié le 2026-06-10
 

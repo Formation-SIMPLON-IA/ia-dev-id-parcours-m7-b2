@@ -2,7 +2,7 @@
 
 > **Repo template.** Binôme par affinité technique. « Use this template » →
 > `M7-B2-medivox-evolutions-<binome>`. **Pas de code** — conception et arbitrage.
-> Restitution orale **en ouverture de M8** (15 min, slides).
+> Restitution orale **en ouverture de M8** (15 min, sur vos schémas — pas de slides).
 
 ---
 
@@ -15,7 +15,7 @@
 | [`ressources/`](./ressources/) | 7 mini-cours (index dans [`ressources/README.md`](./ressources/README.md)) |
 | **Discord `fil-M7-B2`** | Questions communes |
 
-### L'async binôme (jeudi + vendredi matin, 6 h)
+### L'async binôme (jeudi + vendredi matin, 5 h 30)
 
 | Étape | À produire | Fichier | Appui |
 |---|---|---|---|
@@ -23,14 +23,14 @@
 | 2 | Comparatif 3×4 **chiffré** | `comparatif_TEMPLATE.md` | `04` |
 | 3 | Fallback strategies par option | (dans la note) | `05` |
 | 4 | Note 3-5 pages + **recommandation UNE** | `note_comparaison_TEMPLATE.md` | `01`, `05` |
-| 5 | Slides 10 max (15 min) + **répétition duo chronométrée 15 min** | `slides_TEMPLATE.md` | `06` |
+| 5 | **Répétition duo chronométrée 15 min** (oral sur les schémas, pas de slides) | — | — |
 
 Renommez les `*_TEMPLATE` en versions finales.
 
 > ⚠️ La restitution a lieu **en ouverture de M8**, pas cette semaine :
-> figez slides + note **vendredi** — dans 10 jours vous ne saurez plus
+> figez schémas + note **vendredi** — dans 10 jours vous ne saurez plus
 > pourquoi vous aviez écarté l'option C. Au freeze, écrivez en tête de note
-> et de slides la **décision en une phrase** (option + raison chiffrée +
+> la **décision en une phrase** (option + raison chiffrée +
 > condition de changement d'avis) : c'est elle que vous relirez le matin
 > du 6. Le journal de bord est votre assurance-mémoire.
 
@@ -47,9 +47,9 @@ Renommez les `*_TEMPLATE` en versions finales.
 - [ ] **UNE** recommandation tranchée, argumentée chiffrée
 - [ ] **Garde-fou sobriété explicite** : justifiez le choix (ou non) d'une
       approche LLM. *« 5 agents pour prédire un séjour prolongé »* = signal négatif
-- [ ] **Décision en une phrase** en tête de note et de slides
+- [ ] **Décision en une phrase** en tête de note
 - [ ] Répétition duo chronométrée faite (10 min + 5 min Q&A)
-- [ ] Slides lisibles à 3 m (≤ 3 bullets/slide). **Journal de bord** tenu
+- [ ] **Journal de bord** tenu
 
 ## ⭐ Extension (non notée, si socle bouclé) — l'autre produit, mesuré
 
@@ -67,8 +67,4 @@ problème » vaut plus cher qu'un arbitrage de lecture.
 
 ## 📚 Ressources
 
-Voir [`./ressources/`](./ressources/) — 7 mini-cours (dont fine-tuning ⭐) + `liens_officiels.md`.
-
-## 🖨️ Rendu slides (optionnel)
-
-`npx @marp-team/marp-cli slides.md -o slides.pdf` ou extension VS Code Marp.
+Voir [`./ressources/`](./ressources/) — 6 mini-cours (dont fine-tuning ⭐) + `liens_officiels.md`.
