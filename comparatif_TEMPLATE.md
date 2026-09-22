@@ -3,7 +3,7 @@
 | Dimension | A — ML classique | B — Hybride LLM → ML | C — Multi-agents |
 |---|---|---|---|
 | **Conformité** *(qualifiée)* | _niveau + 2 risques + maîtrise_ | _…_ | _…_ |
-| **Performance** *(chiffrée)* | _MAE/RMSE, abstention, p95_ | _…_ | _…_ |
+| **Performance** *(chiffrée)* | _F1 classe « prolongé », abstention, p95_ | _…_ | _…_ |
 | **Sobriété** *(chiffrée)* | _€/mois, €/inf. (ou €/doc) — kWh en bonus_ | _…_ | _…_ |
 | **Évolutivité** *(qualifiée)* | _niveau + points de rupture_ | _…_ | _…_ |
 
