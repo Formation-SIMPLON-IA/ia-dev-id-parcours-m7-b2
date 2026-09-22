@@ -4,8 +4,12 @@
 |---|---|---|---|
 | **Conformité** *(qualifiée)* | _niveau + 2 risques + maîtrise_ | _…_ | _…_ |
 | **Performance** *(chiffrée)* | _MAE/RMSE, abstention, p95_ | _…_ | _…_ |
-| **Sobriété** *(chiffrée)* | _kWh, €/mois, €/inf._ | _…_ | _…_ |
+| **Sobriété** *(chiffrée)* | _€/mois, €/inf. (ou €/doc) — kWh en bonus_ | _…_ | _…_ |
 | **Évolutivité** *(qualifiée)* | _niveau + points de rupture_ | _…_ | _…_ |
+
+> **Évolutivité** = capacité à intégrer de **nouvelles sources de données**, à
+> faire **évoluer le modèle** et à **augmenter le volume** sans refonte majeure.
+> Même définition pour les 3 options — sinon vous comparez des choses différentes.
 
 > **Chiffré vs qualifié** : seules **sobriété** et **performance** se chiffrent.
 > Conformité et évolutivité se **qualifient** — niveau *faible / intermédiaire /

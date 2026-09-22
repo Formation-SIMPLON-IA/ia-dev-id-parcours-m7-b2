@@ -1,6 +1,6 @@
 # Note de comparaison — Évolution du prédicteur de séjour prolongé (À COMPLÉTER)
 
-> 3-5 pages. **Décision en une phrase** (à figer au freeze) : _…_
+> 3 pages maximum. **Décision en une phrase** (à figer au freeze) : _…_
 
 ## Synthèse (3 min)
 ## 3 options détaillées (1 page + schéma chacune)

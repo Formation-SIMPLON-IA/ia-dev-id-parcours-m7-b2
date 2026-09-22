@@ -22,7 +22,7 @@
 | 1 | 3 schémas Mermaid (convention cohérente) | `schemas/option_{a,b,c}_TEMPLATE.md` | `01`, `02`, `03` |
 | 2 | Comparatif 3×4 **chiffré** | `comparatif_TEMPLATE.md` | `04` |
 | 3 | Fallback strategies par option | (dans la note) | `05` |
-| 4 | Note 3-5 pages + **recommandation UNE** | `note_comparaison_TEMPLATE.md` | `01`, `05` |
+| 4 | Note 3 pages maximum + **recommandation UNE** | `note_comparaison_TEMPLATE.md` | `01`, `05` |
 | 5 | **Répétition duo chronométrée 15 min** (oral sur les schémas, pas de slides) | — | — |
 
 Renommez les `*_TEMPLATE` en versions finales.
