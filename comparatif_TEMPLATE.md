@@ -2,9 +2,32 @@
 
 | Dimension | A — ML classique | B — Hybride LLM → ML | C — Multi-agents |
 |---|---|---|---|
-| **Conformité** | _…_ | _…_ | _…_ |
-| **Performance** | _…_ | _…_ | _…_ |
-| **Sobriété** (€/mois, €/inf.) | _…_ | _…_ | _…_ |
-| **Évolutivité** | _…_ | _…_ | _…_ |
+| **Conformité** *(qualifiée)* | _niveau + 2 risques + maîtrise_ | _…_ | _…_ |
+| **Performance** *(chiffrée)* | _MAE/RMSE, abstention, p95_ | _…_ | _…_ |
+| **Sobriété** *(chiffrée)* | _kWh, €/mois, €/inf._ | _…_ | _…_ |
+| **Évolutivité** *(qualifiée)* | _niveau + points de rupture_ | _…_ | _…_ |
 
-> Chaque cellule : ordre de grandeur **chiffré** + risque principal.
+> **Chiffré vs qualifié** : seules **sobriété** et **performance** se chiffrent.
+> Conformité et évolutivité se **qualifient** — niveau *faible / intermédiaire /
+> fort* + justification + mesures de maîtrise. Une conformité « 7/10 » est une
+> fausse précision.
+
+> Chaque cellule : ordre de grandeur **chiffré** (ou niveau **qualifié**) +
+> **risque principal**.
+
+## Hypothèses (obligatoire)
+
+Tout chiffre du tableau renvoie à une hypothèse listée ici. Ce sont des
+**ordres de grandeur fondés sur des hypothèses explicites, pas des mesures de
+production** : le but est de rendre les options comparables, pas de prédire le
+coût réel.
+
+| # | Hypothèse | Valeur retenue | Source / date |
+|---|---|---|---|
+| H1 | Volume (dossiers/mois) | _…_ | _…_ |
+| H2 | Tokens moyens par compte-rendu (in / out) | _…_ | _…_ |
+| H3 | Tarif du modèle retenu | _…_ | _…_ |
+
+> ⚠️ **Performance de l'option B** : aucun gain annoncé sans le **protocole
+> d'ablation** qui le prouverait (même modèle avec / sans les variables
+> extraites, même jeu de test, même métrique) — cf. `ressources/02`.
